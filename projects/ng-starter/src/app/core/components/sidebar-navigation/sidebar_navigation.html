@@ -1,0 +1,20 @@
+<mat-toolbar color="primary">
+  <!-- <button mat-icon-button (click)="drawer.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button> -->
+  <button mat-button (click)="onNavigate('/home')">Home</button>
+</mat-toolbar>
+<mat-drawer-container autosize class="sidebar-navigation--container">
+  <mat-drawer #drawer mode="side" opened class="sidebar-navigation--drawer">
+    <mat-selection-list #shoes [multiple]="false" (selectionChange)="onSelectionChange($event)">
+      <mat-list-option
+        *ngFor="let navigation of navigations"
+        [value]="navigation.path"
+      >
+        {{navigation.displayName}}
+      </mat-list-option>
+    </mat-selection-list>
+  </mat-drawer>
+
+  <ng-content></ng-content>
+</mat-drawer-container>
