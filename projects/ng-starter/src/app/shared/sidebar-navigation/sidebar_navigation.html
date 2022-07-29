@@ -1,0 +1,7 @@
+<ul class="navigation">
+  <li class="navigation-item" *ngFor="let navigation of navigations">
+    <a class="navigation-item--link" [routerLink]="[navigation.path]" routerLinkActive="active">
+      <span class="navigation-item--link-text">{{ navigation.displayName }}</span>
+    </a>
+  </li>
+</ul>

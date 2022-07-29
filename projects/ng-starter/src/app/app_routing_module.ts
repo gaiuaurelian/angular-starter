@@ -26,6 +26,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/page-three/page_three_module').then((m) => m.PageThreeModule),
   },
+  {
+    path: 'page-one-info',
+    loadChildren: () =>
+      import('./pages/page-one-info/page_one_info_module').then((m) => m.PageOneInfoModule),
+  },
 ];
 
 @NgModule({

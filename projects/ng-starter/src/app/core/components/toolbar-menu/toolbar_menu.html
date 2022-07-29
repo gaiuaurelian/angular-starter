@@ -1,0 +1,7 @@
+<mat-toolbar color="primary">
+  <button class="back-button" mat-icon-button *ngIf="menu.hasBackButton" (click)="onBackButton()">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  <h1>{{ menu.pageName }}</h1>
+  <a mat-button *ngFor="let menu of menu.menus" [routerLink]="[menu.path]">{{ menu.displayName }}</a>
+</mat-toolbar>

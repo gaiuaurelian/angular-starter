@@ -1,25 +1,17 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
 import { RouterModule } from '@angular/router';
 import { ToolbarMenuModule } from '../../core/components/toolbar-menu/toolbar_menu_module';
-
-import { Home } from './home';
+import { PageOneInfo } from './page_one_info';
 
 const ROUTES = [
   {
     path: '',
-    component: Home,
+    component: PageOneInfo,
   },
 ];
-
 @NgModule({
-  imports: [
-    CommonModule,
-    RouterModule.forChild(ROUTES),
-    ToolbarMenuModule,
-    MatButtonModule,
-  ],
-  declarations: [Home],
+  imports: [CommonModule, RouterModule.forChild(ROUTES), ToolbarMenuModule],
+  declarations: [PageOneInfo],
 })
-export class HomeModule {}
+export class PageOneInfoModule {}
